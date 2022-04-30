@@ -25,7 +25,9 @@ def get_curr_stations():
         for i in x["etd"]:
             for j in i["estimate"]:
                 if(j["minutes"] == "Leaving"):
+                    #change to abbr
                     curr_stations.append(x["name"])
+                    #also get color here eventually
 
         # lowest = x["etd"][0]
         # for i in x["etd"]:
