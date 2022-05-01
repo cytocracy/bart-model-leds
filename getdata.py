@@ -1,6 +1,11 @@
 
 import requests
 import json
+from colorama import init
+from termcolor import colored
+import colors
+init()
+
 
 stationDict = {}
 curr_stations = []
@@ -26,6 +31,9 @@ def get_curr_stations():
             for j in i["estimate"]:
                 if(j["minutes"] == "Leaving"):
                     #change to abbr
+                    #print name in color of line
+
+                    print(colors.get_color(j["color"].lower()) + x["name"])
                     curr_stations.append(x["name"])
                     #also get color here eventually
 
@@ -41,5 +49,6 @@ def get_curr_stations():
 get_stations()
 #print(json.dumps(stationDict, indent=4))
 get_curr_stations()
-print('\nCurrent stations: \n \n' + curr_stations.__str__() + '\n')
+curr_stations = list(set(curr_stations))
+print('\033[0m'+'\nCurrent stations: \n \n' + curr_stations.__str__() + '\n')
 
