@@ -1,6 +1,11 @@
 class constants:
     # num leds
     num_leds = 60
+    red_line = 0
+    orange_line = 1
+    green_line = 2
+    blue_line = 3
+    yellow_line = 4
     
     class colors:
         red = (255, 0, 0)

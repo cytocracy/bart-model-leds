@@ -34,7 +34,8 @@ def get_curr_stations():
                     #print name in color of line
 
                     print(colors.get_color(j["color"].lower()) + x["name"])
-                    curr_stations.append(x["name"])
+                    curr_data = [x["abbr"], j["color"], j["direction"]]
+                    curr_stations.append(curr_data)
                     #also get color here eventually
 
         # lowest = x["etd"][0]
@@ -45,10 +46,13 @@ def get_curr_stations():
         #     curr_stations.append(x["name"])
 
     # print(json.dumps(data, indent=4))
+    return curr_stations
+
+
 
 get_stations()
 #print(json.dumps(stationDict, indent=4))
 get_curr_stations()
-curr_stations = list(set(curr_stations))
+#curr_stations = list(set(curr_stations))
 print('\033[0m'+'\nCurrent stations: \n \n' + curr_stations.__str__() + '\n')
 
