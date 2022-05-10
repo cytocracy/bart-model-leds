@@ -13,7 +13,17 @@ class constants:
         yellow = (255, 255, 0)
         green = (0, 255, 0)
         orange = (255, 165, 0)
-
+        def getcolor(color):
+            if color == 'red':
+                return constants.colors.red
+            elif color == 'blue':
+                return constants.colors.blue
+            elif color == 'yellow':
+                return constants.colors.yellow
+            elif color == 'green':
+                return constants.colors.green
+            elif color == 'orange':
+                return constants.colors.orange
     class keys:
         stations_north = {}
         stations_south = {}
@@ -119,8 +129,8 @@ class constants:
         stations_south['WDUB'] = 0
         stations_south['WOAK'] = 0
         
-        def getStation(key, is_north):
-            if is_north == True:
+        def getStation(key, direction):
+            if direction == "North":
                 return constants.keys.stations_north[key]
             else:
                 return constants.keys.stations_south[key]
