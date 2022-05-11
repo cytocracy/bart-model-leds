@@ -12,7 +12,4 @@ def update():
     for x in stations:
         pixels[constants.getstation(x[0], x[2])] = constants.getcolor(x[1])
 
-
-while True:
-    update()
-    time.sleep(30)
+update()
