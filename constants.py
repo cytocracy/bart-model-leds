@@ -1,6 +1,6 @@
 
 # num leds
-num_leds = 60
+num_leds = 100
 red_line = 0
 orange_line = 1
 green_line = 2
