@@ -128,7 +128,7 @@ stations_south['WCRK'] = 45
 stations_south['WARM'] = 46
 stations_south['WDUB'] = 47
 stations_south['WOAK'] = 48
-stations_north['12TH'] = 49
+stations_south['12TH'] = 49
 
 
 def get_station(key, direction):
