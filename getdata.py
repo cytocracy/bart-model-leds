@@ -25,6 +25,7 @@ def dict_stations():
 
 
 def get_curr_stations():
+    curr_stations = []
     data = requests.get('http://api.bart.gov/api/etd.aspx?cmd=etd&orig=ALL&key=MW9S-E7SL-26DU-VV8V&json=y').json()
     for x in data["root"]["station"]:
         for i in x["etd"]:
