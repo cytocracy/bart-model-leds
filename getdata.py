@@ -33,7 +33,7 @@ def get_curr_stations():
                     #change to abbr
                     #print name in color of line
 
-                    print(colors.get_color(j["color"].lower()) + x["name"])
+                    # print(colors.get_color(j["color"].lower()) + x["name"])
                     curr_data = [x["abbr"], j["color"], j["direction"]]
                     curr_stations.append(curr_data)
                     #also get color here eventually
@@ -52,7 +52,7 @@ def get_curr_stations():
 
 get_stations()
 #print(json.dumps(stationDict, indent=4))
-
+get_curr_stations()
 #curr_stations = list(set(curr_stations))
 print('\033[0m'+'\nCurrent stations: \n \n' + curr_stations.__str__() + '\n')
 
