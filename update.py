@@ -1,11 +1,11 @@
 # import board
-# import neopixel
+import neopixel
 import constants
 import getdata
 import time
 
-# pixels = neopixel.NeoPixel(board.D18, constants.num_leds)
-# pixels.auto_write = True
+pixels = neopixel.NeoPixel(board.D18, constants.num_leds)
+pixels.auto_write = True
 
 def update():
     stations = getdata.get_curr_stations()
